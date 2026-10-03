@@ -8,11 +8,14 @@ from .database import init_db, list_all_investigations
 from .services.vector_store import vector_store
 from .services.investigation_service import investigation_service
 
+from .api.auth import router as auth_router
 from .api.research import router as research_router
 from .api.investigations import router as investigations_router
 from .api.documents import router as documents_router
 from .api.evidence import router as evidence_router
 from .api.audit import router as audit_router
+from .api.criteria import router as criteria_router
+from .api.evaluation import router as evaluation_router
 
 @asynccontextmanager
 async def lifespan(app: FastAPI):
@@ -56,11 +59,14 @@ app.add_middleware(
 )
 
 # Mount API routers
+app.include_router(auth_router, prefix="/api", tags=["Authentication"])
 app.include_router(research_router, prefix="/api", tags=["Research & Health"])
 app.include_router(investigations_router, prefix="/api", tags=["Investigations"])
 app.include_router(documents_router, prefix="/api", tags=["Documents"])
 app.include_router(evidence_router, prefix="/api", tags=["Evidence"])
 app.include_router(audit_router, prefix="/api", tags=["Audit Trail"])
+app.include_router(criteria_router, prefix="/api", tags=["Accreditation Criteria"])
+app.include_router(evaluation_router, prefix="/api", tags=["Evaluation Studio"])
 
 @app.get("/")
 def root():

@@ -3,45 +3,49 @@
 @tailwind utilities;
 
 :root {
-  --bg: #f7f3fb;
-  --bg-deep: #eee7f7;
-  --header: rgba(255,255,255,.88);
-  --surface: #ffffff;
-  --surface-2: #faf7ff;
-  --surface-3: #f2ecfa;
-  --border: #e6dcef;
-  --border-soft: #d9cce8;
-  --text: #352c40;
-  --text-strong: #211827;
-  --text-muted: #756980;
-  --text-dim: #9a8da7;
-  --accent: #9b6de3;
-  --accent-2: #d17bbd;
-  --accent-3: #7e6bd8;
-  --glow: rgba(155,109,227,.18);
+  --bg: #0B0F19;
+  --bg-deep: #070A12;
+  --header: rgba(15, 23, 42, 0.75);
+  --surface: rgba(17, 24, 39, 0.7);
+  --surface-2: rgba(30, 41, 59, 0.6);
+  --surface-3: rgba(51, 65, 85, 0.5);
+  --border: rgba(56, 189, 248, 0.18);
+  --border-soft: rgba(56, 189, 248, 0.35);
+  --text: #F1F5F9;
+  --text-strong: #FFFFFF;
+  --text-muted: #94A3B8;
+  --text-dim: #64748B;
+  --accent: #38BDF8;
+  --accent-2: #818CF8;
+  --accent-3: #C084FC;
+  --glow: rgba(56, 189, 248, 0.25);
+  --glass: rgba(15, 23, 42, 0.65);
+  --glass-border: rgba(255, 255, 255, 0.12);
 }
 
-:root[data-theme="dark"] {
-  --bg: #0d0a13;
-  --bg-deep: #09070e;
-  --header: rgba(17,12,25,.90);
-  --surface: #17111f;
-  --surface-2: #1d1627;
-  --surface-3: #251b31;
-  --border: #342442;
-  --border-soft: #453052;
-  --text: #eee8f5;
-  --text-strong: #ffffff;
-  --text-muted: #b6a9c1;
-  --text-dim: #84758f;
-  --accent: #b78cff;
-  --accent-2: #e38bc9;
-  --accent-3: #8f82ff;
-  --glow: rgba(183,140,255,.20);
+:root[data-theme="light"] {
+  --bg: #0B0F19;
+  --bg-deep: #070A12;
+  --header: rgba(15, 23, 42, 0.75);
+  --surface: rgba(17, 24, 39, 0.7);
+  --surface-2: rgba(30, 41, 59, 0.6);
+  --surface-3: rgba(51, 65, 85, 0.5);
+  --border: rgba(56, 189, 248, 0.18);
+  --border-soft: rgba(56, 189, 248, 0.35);
+  --text: #F1F5F9;
+  --text-strong: #FFFFFF;
+  --text-muted: #94A3B8;
+  --text-dim: #64748B;
+  --accent: #38BDF8;
+  --accent-2: #818CF8;
+  --accent-3: #C084FC;
+  --glow: rgba(56, 189, 248, 0.25);
+  --glass: rgba(15, 23, 42, 0.65);
+  --glass-border: rgba(255, 255, 255, 0.12);
 }
 
 @layer base {
-  html, body, #root { min-height: 100%; }
+  html, body, #root { min-height: 100%; height: 100%; overflow: hidden; }
   body {
     @apply antialiased;
     background: var(--bg);
@@ -52,47 +56,60 @@
   * { border-color: var(--border); }
 }
 
+/* Deep midnight background ambient lighting and mesh glow */
 body::before {
   content: "";
   position: fixed;
   inset: 0;
   pointer-events: none;
   background:
-    radial-gradient(circle at 15% 10%, rgba(209,123,189,.08), transparent 30%),
-    radial-gradient(circle at 85% 20%, rgba(155,109,227,.10), transparent 32%);
+    radial-gradient(circle at 10% 15%, rgba(56, 189, 248, 0.12), transparent 40%),
+    radial-gradient(circle at 85% 25%, rgba(129, 140, 248, 0.12), transparent 45%),
+    radial-gradient(circle at 50% 80%, rgba(192, 132, 252, 0.08), transparent 50%);
   z-index: -1;
 }
 
-::-webkit-scrollbar { width: 7px; height: 7px; }
+::-webkit-scrollbar { width: 6px; height: 6px; }
 ::-webkit-scrollbar-track { background: var(--bg-deep); }
-::-webkit-scrollbar-thumb { background: var(--border-soft); border-radius: 8px; }
+::-webkit-scrollbar-thumb { background: rgba(56, 189, 248, 0.25); border-radius: 8px; }
 ::-webkit-scrollbar-thumb:hover { background: var(--accent); }
 
+/* Glossy Glassmorphism components */
+.glass-panel {
+  background: var(--glass);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid var(--glass-border);
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.37), inset 0 1px 0 rgba(255, 255, 255, 0.1);
+}
+
+.glass-panel-hover {
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+.glass-panel-hover:hover {
+  border-color: rgba(56, 189, 248, 0.4);
+  box-shadow: 0 16px 48px rgba(0, 0, 0, 0.5), 0 0 24px rgba(56, 189, 248, 0.2);
+  transform: translateY(-2px);
+}
+
 .nexus-gradient-text {
-  background: linear-gradient(100deg, var(--accent-3), var(--accent), var(--accent-2));
+  background: linear-gradient(135deg, #38BDF8 0%, #818CF8 50%, #C084FC 100%);
   -webkit-background-clip: text;
   background-clip: text;
   color: transparent;
 }
 
-.nexus-glow { box-shadow: 0 0 35px var(--glow); }
-.nexus-card { background: var(--surface); border: 1px solid var(--border); box-shadow: 0 12px 30px rgba(73,48,96,.08); }
-:root[data-theme="dark"] .nexus-card { box-shadow: 0 16px 40px rgba(0,0,0,.25); }
+.nexus-glow { box-shadow: 0 0 30px var(--glow); }
 
-@keyframes pulseGlow { 0%,100% { opacity:.65; transform:scale(1); } 50% { opacity:1; transform:scale(1.05); } }
-.animate-pulse-glow { animation: pulseGlow 2s ease-in-out infinite; }
+@keyframes pulseGlow { 0%,100% { opacity:.7; transform:scale(1); } 50% { opacity:1; transform:scale(1.03); } }
+.animate-pulse-glow { animation: pulseGlow 3s ease-in-out infinite; }
 
-@keyframes nodeFloat { 0%,100% { transform: translateY(0px); } 50% { transform: translateY(-5px); } }
-@keyframes edgeFlow { to { stroke-dashoffset: -18; } }
-.nexus-node-float { animation: nodeFloat 3.4s ease-in-out infinite; }
-.react-flow__edge-path { stroke: var(--accent) !important; stroke-width: 2 !important; stroke-dasharray: 6 5; animation: edgeFlow 1.6s linear infinite; }
-.react-flow__edge-text { fill: var(--text-muted) !important; }
-.react-flow__edge-textbg { fill: var(--surface) !important; }
-.react-flow__controls { background: var(--surface) !important; border: 1px solid var(--border) !important; border-radius: 10px !important; box-shadow: 0 8px 20px rgba(0,0,0,.18) !important; }
-.react-flow__controls-button { background: transparent !important; border-bottom: 1px solid var(--border) !important; color: var(--text-muted) !important; }
-.react-flow__controls-button:hover { background: var(--surface-3) !important; color: var(--text-strong) !important; }
-.react-flow__minimap { background: var(--surface) !important; border: 1px solid var(--border) !important; }
-.react-flow__attribution { display:none !important; }
-
-.fade-up { animation: fadeUp .45s ease both; }
-@keyframes fadeUp { from { opacity:0; transform:translateY(8px); } to { opacity:1; transform:none; } }
+/* Reduced motion accessibility */
+@media (prefers-reduced-motion: reduce) {
+  *, ::before, ::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
