@@ -1,6 +1,8 @@
 import sqlite3
 import json
 import os
+import hashlib
+import secrets
 from typing import List, Optional, Dict, Any
 from .config import settings
 
@@ -9,10 +11,49 @@ def get_connection():
     conn.row_factory = sqlite3.Row
     return conn
 
+def hash_password(password: str, salt: Optional[str] = None) -> tuple[str, str]:
+    if not salt:
+        salt = secrets.token_hex(16)
+    hashed = hashlib.pbkdf2_hmac(
+        'sha256',
+        password.encode('utf-8'),
+        salt.encode('utf-8'),
+        100000
+    ).hex()
+    return hashed, salt
+
+def verify_password(password: str, hashed: str, salt: str) -> bool:
+    new_hash, _ = hash_password(password, salt)
+    return secrets.compare_digest(new_hash, hashed)
+
 def init_db():
     conn = get_connection()
     cursor = conn.cursor()
     
+    cursor.execute("""
+    CREATE TABLE IF NOT EXISTS users (
+        id INTEGER PRIMARY KEY AUTOINCREMENT,
+        username TEXT UNIQUE NOT NULL,
+        email TEXT UNIQUE NOT NULL,
+        password_hash TEXT NOT NULL,
+        salt TEXT NOT NULL,
+        full_name TEXT,
+        role TEXT DEFAULT 'Academic Governance Officer',
+        department TEXT DEFAULT 'Institutional Intelligence & Accreditation',
+        created_at TEXT NOT NULL
+    );
+    """)
+
+    cursor.execute("""
+    CREATE TABLE IF NOT EXISTS sessions (
+        token TEXT PRIMARY KEY,
+        user_id INTEGER NOT NULL,
+        created_at TEXT NOT NULL,
+        expires_at TEXT NOT NULL,
+        FOREIGN KEY (user_id) REFERENCES users(id)
+    );
+    """)
+
     cursor.execute("""
     CREATE TABLE IF NOT EXISTS investigations (
         investigation_id TEXT PRIMARY KEY,
@@ -61,6 +102,93 @@ def init_db():
     );
     """)
     
+    conn.commit()
+
+    # Seed default admin / officer account if not exists
+    cursor.execute("SELECT COUNT(*) as count FROM users")
+    row = cursor.fetchone()
+    if row["count"] == 0:
+        p_hash, salt = hash_password("NexusAdmin2025!")
+        cursor.execute("""
+        INSERT INTO users (username, email, password_hash, salt, full_name, role, department, created_at)
+        VALUES (?, ?, ?, ?, ?, ?, ?, datetime('now'))
+        """, (
+            "admin",
+            "admin@nexus.academic.edu",
+            p_hash,
+            salt,
+            "Dr. Eleanor Vance",
+            "Director of Academic Accreditation",
+            "Office of Institutional Intelligence"
+        ))
+        conn.commit()
+
+    conn.close()
+
+def create_user(username: str, email: str, password: str, full_name: str, role: str = "Governance Specialist", department: str = "Academic Affairs") -> Dict[str, Any]:
+    p_hash, salt = hash_password(password)
+    conn = get_connection()
+    cursor = conn.cursor()
+    cursor.execute("""
+    INSERT INTO users (username, email, password_hash, salt, full_name, role, department, created_at)
+    VALUES (?, ?, ?, ?, ?, ?, ?, datetime('now'))
+    """, (username, email, p_hash, salt, full_name, role, department))
+    user_id = cursor.lastrowid
+    conn.commit()
+    conn.close()
+    return get_user_by_id(user_id)
+
+def get_user_by_username_or_email(identifier: str) -> Optional[Dict[str, Any]]:
+    conn = get_connection()
+    cursor = conn.cursor()
+    cursor.execute("SELECT * FROM users WHERE username = ? OR email = ?", (identifier, identifier))
+    row = cursor.fetchone()
+    conn.close()
+    if row:
+        return dict(row)
+    return None
+
+def get_user_by_id(user_id: int) -> Optional[Dict[str, Any]]:
+    conn = get_connection()
+    cursor = conn.cursor()
+    cursor.execute("SELECT id, username, email, full_name, role, department, created_at FROM users WHERE id = ?", (user_id,))
+    row = cursor.fetchone()
+    conn.close()
+    if row:
+        return dict(row)
+    return None
+
+def create_session(user_id: int) -> str:
+    token = secrets.token_hex(32)
+    conn = get_connection()
+    cursor = conn.cursor()
+    cursor.execute("""
+    INSERT INTO sessions (token, user_id, created_at, expires_at)
+    VALUES (?, ?, datetime('now'), datetime('now', '+7 days'))
+    """, (token, user_id))
+    conn.commit()
+    conn.close()
+    return token
+
+def get_user_by_session_token(token: str) -> Optional[Dict[str, Any]]:
+    conn = get_connection()
+    cursor = conn.cursor()
+    cursor.execute("""
+    SELECT u.id, u.username, u.email, u.full_name, u.role, u.department, u.created_at
+    FROM sessions s
+    JOIN users u ON s.user_id = u.id
+    WHERE s.token = ? AND s.expires_at > datetime('now')
+    """, (token,))
+    row = cursor.fetchone()
+    conn.close()
+    if row:
+        return dict(row)
+    return None
+
+def delete_session(token: str):
+    conn = get_connection()
+    cursor = conn.cursor()
+    cursor.execute("DELETE FROM sessions WHERE token = ?", (token,))
     conn.commit()
     conn.close()
 

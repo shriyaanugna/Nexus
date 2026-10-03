@@ -11,6 +11,43 @@ const api = axios.create({
   },
 });
 
+export const login = async (usernameOrEmail, password) => {
+  const resp = await api.post('/api/auth/login', {
+    username_or_email: usernameOrEmail,
+    password: password
+  });
+  return resp.data;
+};
+
+export const register = async (userData) => {
+  const resp = await api.post('/api/auth/register', userData);
+  return resp.data;
+};
+
+export const getCurrentUser = async () => {
+  const token = localStorage.getItem('nexus_token') || sessionStorage.getItem('nexus_token');
+  const resp = await api.get('/api/auth/me', {
+    headers: token ? { Authorization: `Bearer ${token}` } : {}
+  });
+  return resp.data;
+};
+
+export const logoutApi = async () => {
+  const token = localStorage.getItem('nexus_token') || sessionStorage.getItem('nexus_token');
+  try {
+    await api.post('/api/auth/logout', {}, {
+      headers: token ? { Authorization: `Bearer ${token}` } : {}
+    });
+  } catch (e) {
+    // ignore
+  }
+};
+
+export const requestPasswordRecovery = async (email) => {
+  const resp = await api.post('/api/auth/forgot-password', { email });
+  return resp.data;
+};
+
 export const healthCheck = async () => {
   const resp = await api.get('/api/health');
   return resp.data;
@@ -63,6 +100,38 @@ export const getDocuments = async (params = {}) => {
 
 export const getDocument = async (id) => {
   const resp = await api.get(`/api/documents/${id}`);
+  return resp.data;
+};
+
+export const uploadDocument = async (formData) => {
+  const resp = await api.post('/api/documents/upload', formData, {
+    headers: { 'Content-Type': 'multipart/form-data' }
+  });
+  return resp.data;
+};
+
+export const reindexDocument = async (id) => {
+  const resp = await api.post(`/api/documents/${id}/reindex`);
+  return resp.data;
+};
+
+export const deleteDocument = async (id) => {
+  const resp = await api.delete(`/api/documents/${id}`);
+  return resp.data;
+};
+
+export const getCriteria = async (params = {}) => {
+  const resp = await api.get('/api/criteria', { params });
+  return resp.data;
+};
+
+export const getCriterionDetail = async (id) => {
+  const resp = await api.get(`/api/criteria/${id}`);
+  return resp.data;
+};
+
+export const getEvaluationData = async () => {
+  const resp = await api.get('/api/evaluation');
   return resp.data;
 };
 
