@@ -66,6 +66,15 @@ export const getDocument = async (id) => {
   return resp.data;
 };
 
+export const uploadDocument = async (formData) => {
+  const resp = await api.post('/api/documents/upload', formData, {
+    headers: {
+      'Content-Type': 'multipart/form-data',
+    },
+  });
+  return resp.data;
+};
+
 export const getAudit = async (params = {}) => {
   const resp = await api.get('/api/audit', { params });
   return resp.data;

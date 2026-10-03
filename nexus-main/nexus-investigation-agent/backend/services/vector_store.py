@@ -125,6 +125,19 @@ class VectorStore:
         candidates.sort(key=lambda x: x["score"], reverse=True)
         return candidates[:top_k]
 
+    def add_document(self, doc: Dict[str, Any]):
+        self.documents.append(doc)
+        self.doc_map[doc["document_id"]] = doc
+        
+        doc_path = os.path.join(settings.DATA_DIR, "documents.json")
+        try:
+            with open(doc_path, "w", encoding="utf-8") as f:
+                json.dump(self.documents, f, indent=2)
+        except Exception as e:
+            print(f"Error persisting documents: {e}")
+            
+        self.build_index(self.documents)
+
     def get_document(self, doc_id: str) -> Optional[Dict[str, Any]]:
         return self.doc_map.get(doc_id)
 
