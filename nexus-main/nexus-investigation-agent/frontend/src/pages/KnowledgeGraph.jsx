@@ -1,10 +1,8 @@
 import React, { useEffect, useState } from 'react';
-import { getInvestigations } from '../services/api';
+import { getInvestigations, getGraph, getDocument } from '../services/api';
 import EvidenceGraph from '../components/EvidenceGraph';
 import EvidencePanel from '../components/EvidencePanel';
 import { Network, Layers } from 'lucide-react';
-
-const API_URL = import.meta.env.VITE_API_URL;
 
 export default function KnowledgeGraph() {
   const [investigations, setInvestigations] = useState([]);
@@ -22,16 +20,8 @@ export default function KnowledgeGraph() {
           const firstInvId = invs[0].investigation_id;
           setSelectedInvId(firstInvId);
 
-          // Fetch full graph for the selected investigation
-          const resp = await fetch(
-            `${API_URL}/api/investigations/${firstInvId}/graph`
-          );
-
-          if (!resp.ok) {
-            throw new Error(`Graph request failed: ${resp.status}`);
-          }
-
-          const graph = await resp.json();
+          // Fetch full graph for the selected investigation using central API service
+          const graph = await getGraph(firstInvId);
           setCurrentGraph(graph);
         }
       } catch (err) {
@@ -46,15 +36,7 @@ export default function KnowledgeGraph() {
     setSelectedInvId(invId);
 
     try {
-      const resp = await fetch(
-        `${API_URL}/api/investigations/${invId}/graph`
-      );
-
-      if (!resp.ok) {
-        throw new Error(`Graph request failed: ${resp.status}`);
-      }
-
-      const graph = await resp.json();
+      const graph = await getGraph(invId);
       setCurrentGraph(graph);
       setInspectedDoc(null);
     } catch (err) {
@@ -66,13 +48,7 @@ export default function KnowledgeGraph() {
   const handleSelectNode = (data) => {
     if (!data?.document_id) return;
 
-    fetch(`${API_URL}/api/documents/${data.document_id}`)
-      .then((r) => {
-        if (!r.ok) {
-          throw new Error(`Document request failed: ${r.status}`);
-        }
-        return r.json();
-      })
+    getDocument(data.document_id)
       .then((doc) => setInspectedDoc(doc))
       .catch((err) => console.error('Failed to load document:', err));
   };
