@@ -1,0 +1,515 @@
+[
+  {
+    "event_id": "EVT-001",
+    "date": "2026-07-01",
+    "title": "Launch of HyperGrowth Q4 Marketing Blitz",
+    "department": "Marketing",
+    "description": "Marketing deployed a $4.2M paid acquisition campaign targeting enterprise and commercial segments.",
+    "entities": [
+      "ENT-004",
+      "ENT-025"
+    ],
+    "documents": [
+      "DOC-003",
+      "DOC-041"
+    ]
+  },
+  {
+    "event_id": "EVT-002",
+    "date": "2026-07-15",
+    "title": "Engineering Headcount Freeze Enacted",
+    "department": "HR",
+    "description": "HR implemented a Q3 hiring delay for technical support and operations roles to curb SG&A costs.",
+    "entities": [
+      "ENT-014",
+      "ENT-015"
+    ],
+    "documents": [
+      "DOC-012",
+      "DOC-052"
+    ]
+  },
+  {
+    "event_id": "EVT-003",
+    "date": "2026-08-02",
+    "title": "Development Team Spawns 140 Unmanaged Staging Nodes",
+    "department": "Engineering",
+    "description": "Dev teams testing load testing scripts created unmetered GPU/CPU clusters without shutdown tags.",
+    "entities": [
+      "ENT-007",
+      "ENT-010"
+    ],
+    "documents": [
+      "DOC-006",
+      "DOC-046"
+    ]
+  },
+  {
+    "event_id": "EVT-004",
+    "date": "2026-08-05",
+    "title": "Auto-Shutdown Daemon Disabled in Sandbox Cluster",
+    "department": "Engineering",
+    "description": "An engineer commented out the cron execution of cloud-reaper-bot to prevent interruptions during testing.",
+    "entities": [
+      "ENT-008",
+      "ENT-009"
+    ],
+    "documents": [
+      "DOC-009",
+      "DOC-047"
+    ]
+  },
+  {
+    "event_id": "EVT-005",
+    "date": "2026-08-12",
+    "title": "Major Platform Reliability Degradation (SEV-1)",
+    "department": "Engineering",
+    "description": "Database connection pool exhaustion caused 4.5 hours of intermittent 503 errors on enterprise endpoints.",
+    "entities": [
+      "ENT-001",
+      "ENT-006",
+      "ENT-023",
+      "ENT-024"
+    ],
+    "documents": [
+      "DOC-004",
+      "DOC-007",
+      "DOC-043"
+    ]
+  },
+  {
+    "event_id": "EVT-006",
+    "date": "2026-08-14",
+    "title": "Enterprise Customer Escalations Spike 300%",
+    "department": "Customer Support",
+    "description": "Support received over 1,400 priority tickets regarding transaction failures during the Aug 12 incident.",
+    "entities": [
+      "ENT-001",
+      "ENT-012",
+      "ENT-016"
+    ],
+    "documents": [
+      "DOC-008",
+      "DOC-044"
+    ]
+  },
+  {
+    "event_id": "EVT-007",
+    "date": "2026-08-18",
+    "title": "Support SLA First-Response Time Degrades to 34 Hours",
+    "department": "Customer Support",
+    "description": "Support team understaffed due to hiring pause failed to meet enterprise 2-hour SLA guarantee.",
+    "entities": [
+      "ENT-012",
+      "ENT-013",
+      "ENT-014"
+    ],
+    "documents": [
+      "DOC-011",
+      "DOC-045"
+    ]
+  },
+  {
+    "event_id": "EVT-008",
+    "date": "2026-08-22",
+    "title": "Enterprise Account Renewal Holds Issued",
+    "department": "Sales",
+    "description": "Key accounts including ACME Corp and FinGlobal put $12.4M in annual contracts on hold citing reliability.",
+    "entities": [
+      "ENT-001",
+      "ENT-005"
+    ],
+    "documents": [
+      "DOC-005",
+      "DOC-042"
+    ]
+  },
+  {
+    "event_id": "EVT-009",
+    "date": "2026-08-28",
+    "title": "Executive Committee Delivers Scope Changes for v3.5",
+    "department": "Product",
+    "description": "Executive committee requested four unvetted enterprise compliance features 10 days before planned code freeze.",
+    "entities": [
+      "ENT-020",
+      "ENT-022"
+    ],
+    "documents": [
+      "DOC-015",
+      "DOC-055"
+    ]
+  },
+  {
+    "event_id": "EVT-010",
+    "date": "2026-08-30",
+    "title": "August CSAT Drops to Historic Low of 58%",
+    "department": "Customer Support",
+    "description": "Monthly customer satisfaction review recorded a 24-point drop compared to July averages.",
+    "entities": [
+      "ENT-016"
+    ],
+    "documents": [
+      "DOC-010",
+      "DOC-068"
+    ]
+  },
+  {
+    "event_id": "EVT-011",
+    "date": "2026-09-01",
+    "title": "August Cloud Bill Reveals 32% Spend Surge",
+    "department": "Finance",
+    "description": "Monthly AWS and GCP aggregate billing reached $1.85M vs projected baseline of $1.40M.",
+    "entities": [
+      "ENT-008",
+      "ENT-010"
+    ],
+    "documents": [
+      "DOC-002",
+      "DOC-048"
+    ]
+  },
+  {
+    "event_id": "EVT-012",
+    "date": "2026-09-02",
+    "title": "QA Team Halts Release v3.5 Due to 84 Regressions",
+    "department": "Engineering",
+    "description": "Late requirements introduced cascading failures across authorization and reporting APIs.",
+    "entities": [
+      "ENT-020",
+      "ENT-021"
+    ],
+    "documents": [
+      "DOC-016",
+      "DOC-056"
+    ]
+  },
+  {
+    "event_id": "EVT-013",
+    "date": "2026-09-05",
+    "title": "Preliminary Budget Committee Forecasts +5% Q4 Growth",
+    "department": "Finance",
+    "description": "Preliminary modeling assumed high lead conversion from HyperGrowth campaign, published draft forecast.",
+    "entities": [
+      "ENT-003",
+      "ENT-026"
+    ],
+    "documents": [
+      "DOC-020"
+    ]
+  },
+  {
+    "event_id": "EVT-014",
+    "date": "2026-09-10",
+    "title": "Enterprise Churn for Q3 Audited at 14.8%",
+    "department": "Sales",
+    "description": "Quarterly sales audit verified that churn had doubled compared to historical 6.5% benchmark.",
+    "entities": [
+      "ENT-001",
+      "ENT-011"
+    ],
+    "documents": [
+      "DOC-013",
+      "DOC-053"
+    ]
+  },
+  {
+    "event_id": "EVT-015",
+    "date": "2026-09-12",
+    "title": "Suspicious Login on Service Account SA-Analytics",
+    "department": "Security",
+    "description": "SOC detected off-hours login from Ukrainian IP to SA-Analytics without MFA prompt.",
+    "entities": [
+      "ENT-017",
+      "ENT-018",
+      "ENT-019"
+    ],
+    "documents": [
+      "DOC-017",
+      "DOC-057"
+    ]
+  },
+  {
+    "event_id": "EVT-016",
+    "date": "2026-09-13",
+    "title": "SOC Forensic Analysis Confirms Credential Reuse",
+    "department": "Security",
+    "description": "Password for SA-Analytics matched legacy credential leaked in external 2024 data breach; MFA was exempt.",
+    "entities": [
+      "ENT-017",
+      "ENT-018",
+      "ENT-028"
+    ],
+    "documents": [
+      "DOC-018",
+      "DOC-058"
+    ]
+  },
+  {
+    "event_id": "EVT-017",
+    "date": "2026-09-15",
+    "title": "Platform v3.5 Deployment Formally Delayed by 3 Weeks",
+    "department": "Product",
+    "description": "Release Steering Board officially deferred rollout to October 6 to allow engineering bug burn-down.",
+    "entities": [
+      "ENT-020",
+      "ENT-021"
+    ],
+    "documents": [
+      "DOC-019",
+      "DOC-059"
+    ]
+  },
+  {
+    "event_id": "EVT-018",
+    "date": "2026-09-20",
+    "title": "Audited Q4 Financial Ledger Published Showing 8% Decline",
+    "department": "Finance",
+    "description": "Final reconciled numbers reveal Q4 revenue dropped 8% year-over-year despite marketing spend.",
+    "entities": [
+      "ENT-003",
+      "ENT-027"
+    ],
+    "documents": [
+      "DOC-001",
+      "DOC-021"
+    ]
+  },
+  {
+    "event_id": "EVT-019",
+    "date": "2026-09-22",
+    "title": "Cross-Functional Postmortem on Incident INC-8839",
+    "department": "Security",
+    "description": "Security and Platform teams mandated immediate MFA enforcement on all service accounts and API tokens.",
+    "entities": [
+      "ENT-017",
+      "ENT-019"
+    ],
+    "documents": [
+      "DOC-060"
+    ]
+  },
+  {
+    "event_id": "EVT-020",
+    "date": "2026-09-25",
+    "title": "FinOps Implements Automated Cloud Budget Enforcement",
+    "department": "Finance",
+    "description": "New alerting policy terminates any non-production instances running without active tags over weekend.",
+    "entities": [
+      "ENT-008",
+      "ENT-009"
+    ],
+    "documents": [
+      "DOC-050"
+    ]
+  },
+  {
+    "event_id": "EVT-021",
+    "date": "2026-08-11",
+    "title": "Enterprise Review Session #1",
+    "department": "Customer Support",
+    "description": "Operational follow-up review detailing infrastructure telemetry and customer account monitoring.",
+    "entities": [
+      "ENT-012",
+      "ENT-016"
+    ],
+    "documents": [
+      "DOC-051"
+    ]
+  },
+  {
+    "event_id": "EVT-022",
+    "date": "2026-08-12",
+    "title": "Enterprise Review Session #2",
+    "department": "Engineering",
+    "description": "Operational follow-up review detailing infrastructure telemetry and customer account monitoring.",
+    "entities": [
+      "ENT-001",
+      "ENT-006"
+    ],
+    "documents": [
+      "DOC-052"
+    ]
+  },
+  {
+    "event_id": "EVT-023",
+    "date": "2026-08-13",
+    "title": "Enterprise Review Session #3",
+    "department": "Customer Support",
+    "description": "Operational follow-up review detailing infrastructure telemetry and customer account monitoring.",
+    "entities": [
+      "ENT-012",
+      "ENT-016"
+    ],
+    "documents": [
+      "DOC-053"
+    ]
+  },
+  {
+    "event_id": "EVT-024",
+    "date": "2026-08-14",
+    "title": "Enterprise Review Session #4",
+    "department": "Engineering",
+    "description": "Operational follow-up review detailing infrastructure telemetry and customer account monitoring.",
+    "entities": [
+      "ENT-001",
+      "ENT-006"
+    ],
+    "documents": [
+      "DOC-054"
+    ]
+  },
+  {
+    "event_id": "EVT-025",
+    "date": "2026-08-15",
+    "title": "Enterprise Review Session #5",
+    "department": "Customer Support",
+    "description": "Operational follow-up review detailing infrastructure telemetry and customer account monitoring.",
+    "entities": [
+      "ENT-012",
+      "ENT-016"
+    ],
+    "documents": [
+      "DOC-055"
+    ]
+  },
+  {
+    "event_id": "EVT-026",
+    "date": "2026-08-16",
+    "title": "Enterprise Review Session #6",
+    "department": "Engineering",
+    "description": "Operational follow-up review detailing infrastructure telemetry and customer account monitoring.",
+    "entities": [
+      "ENT-001",
+      "ENT-006"
+    ],
+    "documents": [
+      "DOC-056"
+    ]
+  },
+  {
+    "event_id": "EVT-027",
+    "date": "2026-08-17",
+    "title": "Enterprise Review Session #7",
+    "department": "Customer Support",
+    "description": "Operational follow-up review detailing infrastructure telemetry and customer account monitoring.",
+    "entities": [
+      "ENT-012",
+      "ENT-016"
+    ],
+    "documents": [
+      "DOC-057"
+    ]
+  },
+  {
+    "event_id": "EVT-028",
+    "date": "2026-08-18",
+    "title": "Enterprise Review Session #8",
+    "department": "Engineering",
+    "description": "Operational follow-up review detailing infrastructure telemetry and customer account monitoring.",
+    "entities": [
+      "ENT-001",
+      "ENT-006"
+    ],
+    "documents": [
+      "DOC-058"
+    ]
+  },
+  {
+    "event_id": "EVT-029",
+    "date": "2026-08-19",
+    "title": "Enterprise Review Session #9",
+    "department": "Customer Support",
+    "description": "Operational follow-up review detailing infrastructure telemetry and customer account monitoring.",
+    "entities": [
+      "ENT-012",
+      "ENT-016"
+    ],
+    "documents": [
+      "DOC-059"
+    ]
+  },
+  {
+    "event_id": "EVT-030",
+    "date": "2026-08-20",
+    "title": "Enterprise Review Session #10",
+    "department": "Engineering",
+    "description": "Operational follow-up review detailing infrastructure telemetry and customer account monitoring.",
+    "entities": [
+      "ENT-001",
+      "ENT-006"
+    ],
+    "documents": [
+      "DOC-060"
+    ]
+  },
+  {
+    "event_id": "EVT-031",
+    "date": "2026-08-21",
+    "title": "Enterprise Review Session #11",
+    "department": "Customer Support",
+    "description": "Operational follow-up review detailing infrastructure telemetry and customer account monitoring.",
+    "entities": [
+      "ENT-012",
+      "ENT-016"
+    ],
+    "documents": [
+      "DOC-061"
+    ]
+  },
+  {
+    "event_id": "EVT-032",
+    "date": "2026-08-22",
+    "title": "Enterprise Review Session #12",
+    "department": "Engineering",
+    "description": "Operational follow-up review detailing infrastructure telemetry and customer account monitoring.",
+    "entities": [
+      "ENT-001",
+      "ENT-006"
+    ],
+    "documents": [
+      "DOC-062"
+    ]
+  },
+  {
+    "event_id": "EVT-033",
+    "date": "2026-08-23",
+    "title": "Enterprise Review Session #13",
+    "department": "Customer Support",
+    "description": "Operational follow-up review detailing infrastructure telemetry and customer account monitoring.",
+    "entities": [
+      "ENT-012",
+      "ENT-016"
+    ],
+    "documents": [
+      "DOC-063"
+    ]
+  },
+  {
+    "event_id": "EVT-034",
+    "date": "2026-08-24",
+    "title": "Enterprise Review Session #14",
+    "department": "Engineering",
+    "description": "Operational follow-up review detailing infrastructure telemetry and customer account monitoring.",
+    "entities": [
+      "ENT-001",
+      "ENT-006"
+    ],
+    "documents": [
+      "DOC-064"
+    ]
+  },
+  {
+    "event_id": "EVT-035",
+    "date": "2026-08-25",
+    "title": "Enterprise Review Session #15",
+    "department": "Customer Support",
+    "description": "Operational follow-up review detailing infrastructure telemetry and customer account monitoring.",
+    "entities": [
+      "ENT-012",
+      "ENT-016"
+    ],
+    "documents": [
+      "DOC-065"
+    ]
+  }
+]

@@ -1,0 +1,86 @@
+[
+  {
+    "source_id": "SRC-001",
+    "name": "Corporate Finance Analytics",
+    "department": "Finance",
+    "type": "Internal Audit Report",
+    "reliability_level": 0.96
+  },
+  {
+    "source_id": "SRC-002",
+    "name": "Engineering Site Reliability Office",
+    "department": "Engineering",
+    "type": "Incident Postmortem",
+    "reliability_level": 0.94
+  },
+  {
+    "source_id": "SRC-003",
+    "name": "Global Sales Operations",
+    "department": "Sales",
+    "type": "Quarterly Performance Review",
+    "reliability_level": 0.9
+  },
+  {
+    "source_id": "SRC-004",
+    "name": "Customer Support Insights",
+    "department": "Customer Support",
+    "type": "Ticketing Analytics",
+    "reliability_level": 0.88
+  },
+  {
+    "source_id": "SRC-005",
+    "name": "Infrastructure Cloud Architecture Team",
+    "department": "Engineering",
+    "type": "Cloud Billing & Audit",
+    "reliability_level": 0.95
+  },
+  {
+    "source_id": "SRC-006",
+    "name": "Information Security SOC",
+    "department": "Security",
+    "type": "Security Incident Response",
+    "reliability_level": 0.97
+  },
+  {
+    "source_id": "SRC-007",
+    "name": "Product Program Management",
+    "department": "Product",
+    "type": "Release Readiness Audit",
+    "reliability_level": 0.89
+  },
+  {
+    "source_id": "SRC-008",
+    "name": "People Operations & HR Planning",
+    "department": "HR",
+    "type": "Headcount & Capacity Report",
+    "reliability_level": 0.87
+  },
+  {
+    "source_id": "SRC-009",
+    "name": "Growth Marketing Intelligence",
+    "department": "Marketing",
+    "type": "Campaign Performance Analysis",
+    "reliability_level": 0.85
+  },
+  {
+    "source_id": "SRC-010",
+    "name": "Enterprise Customer Advisory Board",
+    "department": "Executive",
+    "type": "Customer Feedback Survey",
+    "reliability_level": 0.8
+  },
+  {
+    "source_id": "SRC-011",
+    "name": "Preliminary Planning Committee",
+    "department": "Finance",
+    "type": "Quarterly Budget Forecast",
+    "reliability_level": 0.65
+  },
+  {
+    "source_id": "SRC-012",
+    "name": "Informal Slack Incident Log",
+    "department": "Engineering",
+    "type": "Channel Chat Notes",
+    "reliability_level": 0.45
+  }
+]

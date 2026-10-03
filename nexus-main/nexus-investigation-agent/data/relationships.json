@@ -1,0 +1,429 @@
+[
+  {
+    "relationship_id": "REL-001",
+    "source": "DOC-001",
+    "target": "DOC-005",
+    "relationship": "caused_by",
+    "strength": 0.93
+  },
+  {
+    "relationship_id": "REL-002",
+    "source": "DOC-005",
+    "target": "DOC-008",
+    "relationship": "caused_by",
+    "strength": 0.91
+  },
+  {
+    "relationship_id": "REL-003",
+    "source": "DOC-008",
+    "target": "DOC-004",
+    "relationship": "caused_by",
+    "strength": 0.95
+  },
+  {
+    "relationship_id": "REL-004",
+    "source": "DOC-004",
+    "target": "DOC-007",
+    "relationship": "explains",
+    "strength": 0.94
+  },
+  {
+    "relationship_id": "REL-005",
+    "source": "DOC-003",
+    "target": "DOC-001",
+    "relationship": "contradicts",
+    "strength": 0.88
+  },
+  {
+    "relationship_id": "REL-006",
+    "source": "DOC-021",
+    "target": "DOC-020",
+    "relationship": "supersedes",
+    "strength": 0.98
+  },
+  {
+    "relationship_id": "REL-007",
+    "source": "DOC-005",
+    "target": "DOC-042",
+    "relationship": "corroborates",
+    "strength": 0.92
+  },
+  {
+    "relationship_id": "REL-008",
+    "source": "DOC-008",
+    "target": "DOC-010",
+    "relationship": "contributes_to",
+    "strength": 0.9
+  },
+  {
+    "relationship_id": "REL-009",
+    "source": "DOC-007",
+    "target": "DOC-043",
+    "relationship": "corroborates",
+    "strength": 0.96
+  },
+  {
+    "relationship_id": "REL-010",
+    "source": "DOC-002",
+    "target": "DOC-006",
+    "relationship": "caused_by",
+    "strength": 0.94
+  },
+  {
+    "relationship_id": "REL-011",
+    "source": "DOC-006",
+    "target": "DOC-009",
+    "relationship": "caused_by",
+    "strength": 0.96
+  },
+  {
+    "relationship_id": "REL-012",
+    "source": "DOC-009",
+    "target": "DOC-047",
+    "relationship": "explains",
+    "strength": 0.95
+  },
+  {
+    "relationship_id": "REL-013",
+    "source": "DOC-048",
+    "target": "DOC-002",
+    "relationship": "corroborates",
+    "strength": 0.93
+  },
+  {
+    "relationship_id": "REL-014",
+    "source": "DOC-006",
+    "target": "DOC-046",
+    "relationship": "supports",
+    "strength": 0.91
+  },
+  {
+    "relationship_id": "REL-015",
+    "source": "DOC-050",
+    "target": "DOC-009",
+    "relationship": "follows",
+    "strength": 0.89
+  },
+  {
+    "relationship_id": "REL-016",
+    "source": "DOC-013",
+    "target": "DOC-011",
+    "relationship": "caused_by",
+    "strength": 0.92
+  },
+  {
+    "relationship_id": "REL-017",
+    "source": "DOC-011",
+    "target": "DOC-012",
+    "relationship": "caused_by",
+    "strength": 0.94
+  },
+  {
+    "relationship_id": "REL-018",
+    "source": "DOC-012",
+    "target": "DOC-052",
+    "relationship": "supports",
+    "strength": 0.9
+  },
+  {
+    "relationship_id": "REL-019",
+    "source": "DOC-011",
+    "target": "DOC-045",
+    "relationship": "corroborates",
+    "strength": 0.92
+  },
+  {
+    "relationship_id": "REL-020",
+    "source": "DOC-010",
+    "target": "DOC-013",
+    "relationship": "contributes_to",
+    "strength": 0.88
+  },
+  {
+    "relationship_id": "REL-021",
+    "source": "DOC-053",
+    "target": "DOC-013",
+    "relationship": "corroborates",
+    "strength": 0.95
+  },
+  {
+    "relationship_id": "REL-022",
+    "source": "DOC-017",
+    "target": "DOC-018",
+    "relationship": "caused_by",
+    "strength": 0.97
+  },
+  {
+    "relationship_id": "REL-023",
+    "source": "DOC-018",
+    "target": "DOC-058",
+    "relationship": "supports",
+    "strength": 0.95
+  },
+  {
+    "relationship_id": "REL-024",
+    "source": "DOC-017",
+    "target": "DOC-057",
+    "relationship": "corroborates",
+    "strength": 0.94
+  },
+  {
+    "relationship_id": "REL-025",
+    "source": "DOC-060",
+    "target": "DOC-017",
+    "relationship": "follows",
+    "strength": 0.91
+  },
+  {
+    "relationship_id": "REL-026",
+    "source": "DOC-019",
+    "target": "DOC-016",
+    "relationship": "caused_by",
+    "strength": 0.95
+  },
+  {
+    "relationship_id": "REL-027",
+    "source": "DOC-016",
+    "target": "DOC-015",
+    "relationship": "caused_by",
+    "strength": 0.96
+  },
+  {
+    "relationship_id": "REL-028",
+    "source": "DOC-015",
+    "target": "DOC-055",
+    "relationship": "supports",
+    "strength": 0.93
+  },
+  {
+    "relationship_id": "REL-029",
+    "source": "DOC-016",
+    "target": "DOC-056",
+    "relationship": "corroborates",
+    "strength": 0.94
+  },
+  {
+    "relationship_id": "REL-030",
+    "source": "DOC-019",
+    "target": "DOC-059",
+    "relationship": "corroborates",
+    "strength": 0.92
+  },
+  {
+    "relationship_id": "REL-031",
+    "source": "DOC-004",
+    "target": "DOC-010",
+    "relationship": "contributes_to",
+    "strength": 0.91
+  },
+  {
+    "relationship_id": "REL-032",
+    "source": "DOC-010",
+    "target": "DOC-005",
+    "relationship": "contributes_to",
+    "strength": 0.89
+  },
+  {
+    "relationship_id": "REL-033",
+    "source": "DOC-044",
+    "target": "DOC-004",
+    "relationship": "explains",
+    "strength": 0.92
+  },
+  {
+    "relationship_id": "REL-034",
+    "source": "DOC-007",
+    "target": "DOC-023",
+    "relationship": "related_to",
+    "strength": 0.85
+  },
+  {
+    "relationship_id": "REL-035",
+    "source": "DOC-023",
+    "target": "DOC-022",
+    "relationship": "supersedes",
+    "strength": 0.97
+  },
+  {
+    "relationship_id": "REL-036",
+    "source": "DOC-070",
+    "target": "DOC-001",
+    "relationship": "related_to",
+    "strength": 0.84
+  },
+  {
+    "relationship_id": "REL-037",
+    "source": "DOC-071",
+    "target": "DOC-002",
+    "relationship": "related_to",
+    "strength": 0.83
+  },
+  {
+    "relationship_id": "REL-038",
+    "source": "DOC-072",
+    "target": "DOC-013",
+    "relationship": "related_to",
+    "strength": 0.85
+  },
+  {
+    "relationship_id": "REL-039",
+    "source": "DOC-073",
+    "target": "DOC-017",
+    "relationship": "related_to",
+    "strength": 0.86
+  },
+  {
+    "relationship_id": "REL-040",
+    "source": "DOC-074",
+    "target": "DOC-019",
+    "relationship": "related_to",
+    "strength": 0.87
+  },
+  {
+    "relationship_id": "REL-041",
+    "source": "DOC-041",
+    "target": "DOC-031",
+    "relationship": "related_to",
+    "strength": 0.91
+  },
+  {
+    "relationship_id": "REL-042",
+    "source": "DOC-042",
+    "target": "DOC-032",
+    "relationship": "supports",
+    "strength": 0.92
+  },
+  {
+    "relationship_id": "REL-043",
+    "source": "DOC-043",
+    "target": "DOC-033",
+    "relationship": "related_to",
+    "strength": 0.93
+  },
+  {
+    "relationship_id": "REL-044",
+    "source": "DOC-044",
+    "target": "DOC-034",
+    "relationship": "supports",
+    "strength": 0.94
+  },
+  {
+    "relationship_id": "REL-045",
+    "source": "DOC-045",
+    "target": "DOC-035",
+    "relationship": "related_to",
+    "strength": 0.8
+  },
+  {
+    "relationship_id": "REL-046",
+    "source": "DOC-046",
+    "target": "DOC-036",
+    "relationship": "supports",
+    "strength": 0.81
+  },
+  {
+    "relationship_id": "REL-047",
+    "source": "DOC-047",
+    "target": "DOC-037",
+    "relationship": "related_to",
+    "strength": 0.82
+  },
+  {
+    "relationship_id": "REL-048",
+    "source": "DOC-048",
+    "target": "DOC-038",
+    "relationship": "supports",
+    "strength": 0.83
+  },
+  {
+    "relationship_id": "REL-049",
+    "source": "DOC-049",
+    "target": "DOC-039",
+    "relationship": "related_to",
+    "strength": 0.84
+  },
+  {
+    "relationship_id": "REL-050",
+    "source": "DOC-050",
+    "target": "DOC-040",
+    "relationship": "supports",
+    "strength": 0.85
+  },
+  {
+    "relationship_id": "REL-051",
+    "source": "DOC-051",
+    "target": "DOC-041",
+    "relationship": "related_to",
+    "strength": 0.86
+  },
+  {
+    "relationship_id": "REL-052",
+    "source": "DOC-052",
+    "target": "DOC-042",
+    "relationship": "supports",
+    "strength": 0.87
+  },
+  {
+    "relationship_id": "REL-053",
+    "source": "DOC-053",
+    "target": "DOC-043",
+    "relationship": "related_to",
+    "strength": 0.88
+  },
+  {
+    "relationship_id": "REL-054",
+    "source": "DOC-054",
+    "target": "DOC-044",
+    "relationship": "supports",
+    "strength": 0.89
+  },
+  {
+    "relationship_id": "REL-055",
+    "source": "DOC-055",
+    "target": "DOC-045",
+    "relationship": "related_to",
+    "strength": 0.9
+  },
+  {
+    "relationship_id": "REL-056",
+    "source": "DOC-056",
+    "target": "DOC-046",
+    "relationship": "supports",
+    "strength": 0.91
+  },
+  {
+    "relationship_id": "REL-057",
+    "source": "DOC-057",
+    "target": "DOC-047",
+    "relationship": "related_to",
+    "strength": 0.92
+  },
+  {
+    "relationship_id": "REL-058",
+    "source": "DOC-058",
+    "target": "DOC-048",
+    "relationship": "supports",
+    "strength": 0.93
+  },
+  {
+    "relationship_id": "REL-059",
+    "source": "DOC-059",
+    "target": "DOC-049",
+    "relationship": "related_to",
+    "strength": 0.94
+  },
+  {
+    "relationship_id": "REL-060",
+    "source": "DOC-060",
+    "target": "DOC-050",
+    "relationship": "supports",
+    "strength": 0.8
+  },
+  {
+    "relationship_id": "REL-061",
+    "source": "DOC-061",
+    "target": "DOC-051",
+    "relationship": "related_to",
+    "strength": 0.81
+  }
+]

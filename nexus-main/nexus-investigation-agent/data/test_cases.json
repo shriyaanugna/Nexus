@@ -1,0 +1,101 @@
+[
+  {
+    "id": "CASE-001",
+    "question": "Why did Q4 revenue decline despite increased marketing spending?",
+    "expected_type": "demo",
+    "expected_outcome": "Customer-impacting reliability issues contributed to delayed enterprise renewals and lower enterprise revenue.",
+    "required_citations": [
+      "DOC-001",
+      "DOC-004",
+      "DOC-005",
+      "DOC-007"
+    ],
+    "contradiction_expected": true,
+    "min_depth": 3
+  },
+  {
+    "id": "CASE-002",
+    "question": "Why did cloud infrastructure costs increase by 32%?",
+    "expected_type": "demo",
+    "expected_outcome": "Unused development environments and missing automatic shutdown contributed significantly to excess compute usage and increased cloud spending.",
+    "required_citations": [
+      "DOC-002",
+      "DOC-006",
+      "DOC-009"
+    ],
+    "contradiction_expected": false,
+    "min_depth": 3
+  },
+  {
+    "id": "CASE-003",
+    "question": "Why did enterprise customer churn increase in Q3?",
+    "expected_type": "demo",
+    "expected_outcome": "A support hiring freeze created severe staffing capacity deficits, lengthening response times and customer dissatisfaction, which drove enterprise churn.",
+    "required_citations": [
+      "DOC-011",
+      "DOC-012",
+      "DOC-013"
+    ],
+    "contradiction_expected": true,
+    "min_depth": 3
+  },
+  {
+    "id": "CASE-004",
+    "question": "What caused the security incident on September 12?",
+    "expected_type": "demo",
+    "expected_outcome": "Reused credentials from an external data leak allowed unauthorized access because the service account lacked multi-factor authentication enforcement.",
+    "required_citations": [
+      "DOC-017",
+      "DOC-018"
+    ],
+    "contradiction_expected": false,
+    "min_depth": 2
+  },
+  {
+    "id": "CASE-005",
+    "question": "Why was the platform release delayed by three weeks?",
+    "expected_type": "demo",
+    "expected_outcome": "Late feature scope additions injected near release forced extensive engineering rework and a regression testing backlog, delaying deployment.",
+    "required_citations": [
+      "DOC-015",
+      "DOC-016",
+      "DOC-019"
+    ],
+    "contradiction_expected": false,
+    "min_depth": 3
+  },
+  {
+    "id": "CASE-006",
+    "question": "Why did customer satisfaction decrease during August?",
+    "expected_type": "new_question",
+    "expected_outcome": "The August 12 platform reliability outage coupled with slow support response times drove customer satisfaction to historic lows.",
+    "required_citations": [
+      "DOC-004",
+      "DOC-008",
+      "DOC-010"
+    ],
+    "contradiction_expected": false,
+    "min_depth": 2
+  },
+  {
+    "id": "CASE-007",
+    "question": "What caused the lunar manufacturing division to miss its target?",
+    "expected_type": "insufficient_evidence",
+    "expected_outcome": "INSUFFICIENT EVIDENCE",
+    "required_citations": [],
+    "contradiction_expected": false,
+    "min_depth": 1
+  },
+  {
+    "id": "CASE-008",
+    "question": "What caused the increase in customer complaints?",
+    "expected_type": "new_question",
+    "expected_outcome": "Customer complaints spiked following the August 12 database connection pool failure that disrupted enterprise services.",
+    "required_citations": [
+      "DOC-004",
+      "DOC-008"
+    ],
+    "contradiction_expected": false,
+    "min_depth": 2
+  }
+]

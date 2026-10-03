@@ -1,0 +1,344 @@
+[
+  {
+    "entity_id": "ENT-001",
+    "name": "Enterprise Customers",
+    "type": "Customer Segment",
+    "aliases": [
+      "enterprise clients",
+      "enterprise accounts",
+      "key accounts",
+      "tier 1 accounts"
+    ]
+  },
+  {
+    "entity_id": "ENT-002",
+    "name": "Mid-Market Customers",
+    "type": "Customer Segment",
+    "aliases": [
+      "mid-market",
+      "commercial accounts"
+    ]
+  },
+  {
+    "entity_id": "ENT-003",
+    "name": "Q4 Revenue",
+    "type": "Financial Metric",
+    "aliases": [
+      "fourth quarter revenue",
+      "FY26 Q4 revenue",
+      "gross revenue"
+    ]
+  },
+  {
+    "entity_id": "ENT-004",
+    "name": "Marketing Spend",
+    "type": "Financial Metric",
+    "aliases": [
+      "marketing budget",
+      "customer acquisition expenditure",
+      "ad spend"
+    ]
+  },
+  {
+    "entity_id": "ENT-005",
+    "name": "Enterprise Renewal Rate",
+    "type": "Business Metric",
+    "aliases": [
+      "contract renewals",
+      "enterprise retention",
+      "renewal velocity",
+      "renewal delays"
+    ]
+  },
+  {
+    "entity_id": "ENT-006",
+    "name": "Platform Core Cluster",
+    "type": "Infrastructure Component",
+    "aliases": [
+      "core k8s cluster",
+      "primary production cluster",
+      "us-east-prod"
+    ]
+  },
+  {
+    "entity_id": "ENT-007",
+    "name": "Staging Dev Environments",
+    "type": "Infrastructure Component",
+    "aliases": [
+      "development environments",
+      "ephemeral dev clusters",
+      "sandbox envs"
+    ]
+  },
+  {
+    "entity_id": "ENT-008",
+    "name": "Cloud Infrastructure Cost",
+    "type": "Financial Metric",
+    "aliases": [
+      "AWS bill",
+      "cloud hosting cost",
+      "compute spend",
+      "cloud infrastructure spending"
+    ]
+  },
+  {
+    "entity_id": "ENT-009",
+    "name": "Auto-Shutdown Daemon",
+    "type": "Software Component",
+    "aliases": [
+      "idle reaper script",
+      "scheduled instance terminator",
+      "cloud-reaper-bot"
+    ]
+  },
+  {
+    "entity_id": "ENT-010",
+    "name": "Compute Utilization",
+    "type": "System Metric",
+    "aliases": [
+      "EC2 vCPU usage",
+      "cluster capacity",
+      "active worker nodes"
+    ]
+  },
+  {
+    "entity_id": "ENT-011",
+    "name": "Customer Churn Q3",
+    "type": "Business Metric",
+    "aliases": [
+      "third quarter churn",
+      "enterprise cancellations",
+      "account attrition"
+    ]
+  },
+  {
+    "entity_id": "ENT-012",
+    "name": "Support Ticket Backlog",
+    "type": "Operational Metric",
+    "aliases": [
+      "unresolved tickets",
+      "support queue size",
+      "support volume"
+    ]
+  },
+  {
+    "entity_id": "ENT-013",
+    "name": "Support SLA Response Time",
+    "type": "Operational Metric",
+    "aliases": [
+      "first response time",
+      "mean time to respond",
+      "support MTTR"
+    ]
+  },
+  {
+    "entity_id": "ENT-014",
+    "name": "Tier-2 Support Headcount",
+    "type": "Organizational Resource",
+    "aliases": [
+      "senior support engineers",
+      "technical support staff",
+      "support capacity"
+    ]
+  },
+  {
+    "entity_id": "ENT-015",
+    "name": "HR Technical Hiring Freeze",
+    "type": "Organizational Policy",
+    "aliases": [
+      "hiring delay",
+      "budget freeze",
+      "recruitment pause"
+    ]
+  },
+  {
+    "entity_id": "ENT-016",
+    "name": "Customer Satisfaction (CSAT)",
+    "type": "Customer Metric",
+    "aliases": [
+      "NPS score",
+      "satisfaction index",
+      "client sentiment"
+    ]
+  },
+  {
+    "entity_id": "ENT-017",
+    "name": "Security Incident Sept 12",
+    "type": "Security Event",
+    "aliases": [
+      "INC-8839",
+      "September 12 breach attempt",
+      "SOC alert 912"
+    ]
+  },
+  {
+    "entity_id": "ENT-018",
+    "name": "Service Account SA-Analytics",
+    "type": "Security Identity",
+    "aliases": [
+      "analytics service user",
+      "sa-analytics-svc",
+      "ETL ingestion identity"
+    ]
+  },
+  {
+    "entity_id": "ENT-019",
+    "name": "Okta Single Sign-On / MFA",
+    "type": "Security System",
+    "aliases": [
+      "identity provider",
+      "multi-factor authentication",
+      "IdP gateway"
+    ]
+  },
+  {
+    "entity_id": "ENT-020",
+    "name": "Platform Release v3.5",
+    "type": "Software Release",
+    "aliases": [
+      "autumn release",
+      "September platform release",
+      "v3.5 rollout"
+    ]
+  },
+  {
+    "entity_id": "ENT-021",
+    "name": "QA Regression Testing Suite",
+    "type": "Testing Process",
+    "aliases": [
+      "automated regression tests",
+      "release candidate validation"
+    ]
+  },
+  {
+    "entity_id": "ENT-022",
+    "name": "Late Scope Additions",
+    "type": "Product Decision",
+    "aliases": [
+      "scope creep",
+      "emergency feature requests",
+      "late requirements"
+    ]
+  },
+  {
+    "entity_id": "ENT-023",
+    "name": "Database Connection Pool Exhaustion",
+    "type": "Technical Flaw",
+    "aliases": [
+      "pgpool saturation",
+      "RDS max_connections hit",
+      "connection leakage"
+    ]
+  },
+  {
+    "entity_id": "ENT-024",
+    "name": "August Outage Event",
+    "type": "Operational Incident",
+    "aliases": [
+      "August 12 service degradation",
+      "SEV-1 outage",
+      "major August incident"
+    ]
+  },
+  {
+    "entity_id": "ENT-025",
+    "name": "Campaign 'HyperGrowth Q4'",
+    "type": "Marketing Campaign",
+    "aliases": [
+      "Q4 ad campaign",
+      "lead gen blitz",
+      "growth ads"
+    ]
+  },
+  {
+    "entity_id": "ENT-026",
+    "name": "Financial Forecast v1.0",
+    "type": "Financial Document",
+    "aliases": [
+      "preliminary Q4 estimate",
+      "draft budget"
+    ]
+  },
+  {
+    "entity_id": "ENT-027",
+    "name": "Financial Actuals v2.0",
+    "type": "Financial Document",
+    "aliases": [
+      "final audited Q4 report",
+      "reconciled revenue ledger"
+    ]
+  },
+  {
+    "entity_id": "ENT-028",
+    "name": "Credential Stuffing Attempt",
+    "type": "Threat Vector",
+    "aliases": [
+      "brute force attack",
+      "stolen credential reuse",
+      "dictionary attack"
+    ]
+  },
+  {
+    "entity_id": "ENT-029",
+    "name": "Customer Advisory Council",
+    "type": "Organization Group",
+    "aliases": [
+      "CAB",
+      "customer steering group"
+    ]
+  },
+  {
+    "entity_id": "ENT-030",
+    "name": "Billing Automation Gateway",
+    "type": "Software Component",
+    "aliases": [
+      "Stripe connector",
+      "recurring invoice engine"
+    ]
+  },
+  {
+    "entity_id": "ENT-031",
+    "name": "Product Management Office",
+    "type": "Department",
+    "aliases": [
+      "PMO",
+      "product leads"
+    ]
+  },
+  {
+    "entity_id": "ENT-032",
+    "name": "Data Analytics Pipeline",
+    "type": "Technical System",
+    "aliases": [
+      "Snowflake ingestion",
+      "dbt transformation pipeline"
+    ]
+  },
+  {
+    "entity_id": "ENT-033",
+    "name": "Customer Success Engagement",
+    "type": "Operational Process",
+    "aliases": [
+      "TAM reviews",
+      "executive check-ins"
+    ]
+  },
+  {
+    "entity_id": "ENT-034",
+    "name": "Contract Legal Review Cycle",
+    "type": "Business Process",
+    "aliases": [
+      "redline negotiations",
+      "master services agreement reviews"
+    ]
+  },
+  {
+    "entity_id": "ENT-035",
+    "name": "Lunar Manufacturing Unit",
+    "type": "Hypothetical Division",
+    "aliases": [
+      "space operations",
+      "off-world fabrication"
+    ]
+  }
+]
